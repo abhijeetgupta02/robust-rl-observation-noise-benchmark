@@ -92,7 +92,7 @@ A first **runnable** vertical slice is implemented:
 > ⚠️ This is a *starting point*, not a finished benchmark. It currently contains
 > **one** environment, **one** noise process, and **one** agent. No leaderboard
 > numbers are claimed, and none are committed to the repo — see
-> [No results are fabricated](#no-results-are-fabricated) below.
+> [No results are fabricated](#-no-results-are-fabricated) below.
 
 ### Install
 
@@ -138,7 +138,26 @@ pytest
 The tests check observation shape/dtype from the noisy wrapper and that the
 Gaussian noise is reproducible under a fixed seed (no training required).
 
-## No results are fabricated
+## 📈 What you'll end up plotting
+
+The headline question this benchmark asks is simple: **how fast does an agent's
+return fall off as observation noise grows?** So the natural plot is **mean
+episodic return on the y-axis against the noise level σ on the x-axis**, with
+error bars showing the spread (std) across evaluation episodes. A robust agent's
+curve stays high and flat; a fragile one drops steeply as σ increases.
+
+`scripts/plot_return_vs_sigma.py` reads the per-σ evaluation JSONs and draws
+exactly that curve:
+
+![DQN return vs. observation noise](docs/cartpole_return_vs_sigma.png)
+
+> This figure is an **example from a single seeded run on one machine** (the DQN
+> baseline with the default config, 10 eval episodes per σ). It is illustrative,
+> not a claimed benchmark result — regenerate it for your own hardware, seeds,
+> and episode counts using the train → eval → plot steps above. The underlying
+> numbers are intentionally **not** copied into this README.
+
+## 🔍 No results are fabricated
 
 - The README contains **no performance numbers**. Any returns you see come from
   running the scripts yourself on your own machine.
@@ -147,7 +166,9 @@ Gaussian noise is reproducible under a fixed seed (no training required).
 - The leaderboard below is an **empty template** with `TBD` placeholders. Rows
   will be filled only after real, seeded runs.
 
-## Leaderboard (template — values are placeholders)
+## 🏆 Leaderboard (template — values are placeholders)
+
+Bring your own agent + seed, then add a row here via PR.
 
 | Agent | Env + Noise         | Return (mean ± std) | Seeds | Paper / Repo |
 |-------|---------------------|---------------------|-------|--------------|
