@@ -1,8 +1,18 @@
 # Robust RL under Observation Noise Benchmark
 
+[![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Status](https://img.shields.io/badge/status-experimental-orange)](https://github.com/abhijeetgupta02/robust-rl-observation-noise-benchmark)
+[![Maintainer](https://img.shields.io/badge/maintainer-Abhijeet%20Gupta-0e75b6)](https://github.com/abhijeetgupta02)
+
 Benchmark suite for **robust reinforcement learning under observation noise**, with environments, noise processes, and baseline agents.
 
 > Status: ✨ Planning / scaffolding — initial environments and baselines to be added.
+
+## Why you might care
+
+- You want to **stress-test RL agents** when sensors are noisy, delayed, or missing.
+- You need a **standardized CartPole noise benchmark** for papers, not one-off scripts.
+- You care about **seeded, reproducible runs** with clear configs and JSON logs.
 
 ## Goals
 
