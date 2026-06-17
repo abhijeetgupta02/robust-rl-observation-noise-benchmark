@@ -8,7 +8,7 @@ Benchmark suite for **robust reinforcement learning under observation noise**, w
 
 > Status: ✨ Planning / scaffolding — initial environments and baselines to be added.
 
-## Why you might care
+## 🚀 Why you might care
 
 - You want to **stress-test RL agents** when sensors are noisy, delayed, or missing.
 - You need a **standardized CartPole noise benchmark** for papers, not one-off scripts.
@@ -100,7 +100,7 @@ Requires Python 3.10+ and runs on a **CPU-only** laptop.
 
 ```bash
 pip install -e .          # installs the package + deps (gymnasium, torch, numpy, pyyaml)
-pip install -e ".[dev]"   # optional: adds pytest
+pip install -e "[dev]"   # optional: adds pytest
 ```
 
 ### 1. Train the baseline (clean CartPole)
